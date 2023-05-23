@@ -1,6 +1,5 @@
-# Project Title
+# SnowBot ❄️
 
-SnowBot ❄️
 
 ## Description
 
