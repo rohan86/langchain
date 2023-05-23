@@ -1,5 +1,4 @@
 pyarrow==10.0.1
-streamlit==1.22.0
 snowflake-sqlalchemy==1.4.7
 SQLAlchemy==1.4.48
 streamlit==1.22.0
