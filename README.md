@@ -11,13 +11,11 @@ The querybot leverages Azure Open AI to help generate ANSI standard SQL queries 
 
 Please ensure you have the following:
 
-An Azure Open AI service account with a deployed GPT-3.5 model.
-The OpenAI Key and OpenAI URL for your Azure Open AI service deployment.
+An Azure Open AI service account with a deployed GPT-3.5 model.The OpenAI Key and OpenAI URL for your Azure Open AI service deployment.
 If you haven't set up an Azure Open AI service account and deployed the GPT-3.5 model, follow these steps:
 
 Sign in to the Azure portal at https://portal.azure.com.
-Create a new Azure Open AI resource. Learn how to create an Azure Open AI resource with this Microsoft Learn guide.
-Follow the instructions to deploy the GPT-3.5 model within your Azure Open AI service. Refer to the Microsoft Learn guide for detailed steps on deploying the GPT-3.5 model.
+Refer to the Microsoft Learn guide for detailed steps on deploying the GPT-3.5 model.
 Retrieve the OpenAI Key and OpenAI URL from your Azure Open AI service account.
 
 ### Installing
