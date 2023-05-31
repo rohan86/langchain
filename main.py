@@ -4,15 +4,17 @@ import pandas as pd
 from lgchain import chain
 from streamlit import components
 from streamlit_chat import message
+import os
 
-
-
+current_file_path = os.path.abspath(__file__)
+current_directory = os.path.dirname(current_file_path)
 
 st.title("SnowBot ❄️")
 st.caption("**********")
 
 
-with open(r"C:\Users\rohanthareja\OneDrive - Microsoft\Desktop\Py\snowflke\styles.md") as styles_file:
+
+with open(f"{current_directory}\styles.md") as styles_file:
     styles_content = styles_file.read()
 
 st.write(styles_content, unsafe_allow_html=True)
@@ -51,6 +53,5 @@ if st.session_state['generated']:
             for i in range(len(st.session_state['generated'])):
                 message(st.session_state["past"][i], is_user=True, key=str(i) + '_user', avatar_style="big-smile")
                 message(st.session_state["generated"][i], key=str(i), avatar_style="thumbs")
-
 
 
