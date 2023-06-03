@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ### Executing program
 
 ```
-steamlit main.py
+steamlit run main.py
 ```
 
 ## Version History
