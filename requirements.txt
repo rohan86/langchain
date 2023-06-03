@@ -3,4 +3,6 @@ snowflake-sqlalchemy==1.4.7
 SQLAlchemy==1.4.48
 streamlit==1.22.0
 streamlit-chat==0.0.2.2
-Python==3.11.0
+langchain==0.0.154
+python-dotenv==1.0.0
+openai==0.27.6
