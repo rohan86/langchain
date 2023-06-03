@@ -21,11 +21,10 @@ from langchain.agents import AgentExecutor
 
 load_dotenv()
 
-openai.api_type = "azure"
-openai.api_base = "https://aopai.openai.azure.com/"
-openai.api_version = "2022-12-01"
-api_key = os.getenv("OPENAI_API_KEY")
-os.environ["OPENAI_API_TYPE"] = "azure"
+openai.api_type = os.getenv("OPENAI_API_TYPE")
+openai.api_base = os.getenv("OPENAI_API_BASE")
+openai.api_version = os.getenv("OPENAI_API_VERSION")
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 user= os.environ['USER']
 password=os.environ['PASS']
@@ -34,6 +33,8 @@ database=os.environ['DBS']
 schema=os.environ['schema']
 role=os.environ['role']
 warehouse=os.environ['warehouse']
+deploymentname=os.environ['DepolymentName']
+modelname=os.environ['modelname']
 
 
 _DEFAULT_TEMPLATE = """You're a senior SQL developer. You have to write sql code in snowflake database based on the following question. Also you have to ignore the sql keywords and give a one or two sentences about how did you arrive at that sql code. display the sql code in the code format (do not assume anything if the column is not available then say it is not available, do not make up code).
@@ -72,7 +73,7 @@ prompt = PromptTemplate(
 ))
 """
 
-llm = AzureOpenAI(deployment_name="SnowSQL", model_name="text-davinci-003",temperature=0)
+llm = AzureOpenAI(deployment_name=deploymentname, model_name=modelname,temperature=0)
 
 #db = SQLDatabase(engine)
 conn_string = f"snowflake://{user}:{password}@{account}/{database}/{schema}?warehouse={warehouse}&role={role}"
